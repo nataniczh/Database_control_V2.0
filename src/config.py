@@ -9,7 +9,6 @@ class Settings(BaseSettings):
 
     @property
     def DATABASE_URL_pyodbc(self):
-        # Constructing the connection string with Initial Catalog and Trusted_Connection
         return (
             f"mssql+pyodbc://{self.DB_SERVER}/{self.INITIAL_CATALOG}?"
             f"driver={self.DB_DRIVER}&"
